@@ -24,9 +24,9 @@ The sentence can be recreated from the positions of these words in this list usi
     1,2,3,4,5,6,7,8,9,1,3,9,6,7,8,4,5
 Save the list of words and the positions of these words in the sentence as separate files or as a single file.
 Analyse the requirements for this system and design, develop, test and evaluate a program to:
-•	identify the individual words in a sentence and store them in a list 
-•	create a list of positions for words in that list
-•	save these lists as a single file or as separate files.
+\n•	identify the individual words in a sentence and store them in a list 
+\n•	create a list of positions for words in that list
+\n•	save these lists as a single file or as separate files.
 
 Task 3
 Develop a program that builds upon the technique from Task 2 to compress a text file with several sentences, including punctuation. The program should be able to compress a file into a list of words and list of positions to recreate the original file. It should also be able to take a compressed file and recreate the full text, including punctuation and capitalisation, of the original file.
