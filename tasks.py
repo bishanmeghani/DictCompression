@@ -9,7 +9,28 @@ def task1(sentence, word):
         if word.lower() == s[i]:
             found = True
             positions.append(i+1)
-       
     return positions if found else "Word not found"
 
-print(task1(sentence, word))
+def task2(sentence):
+    unique_words = []
+    positions = []
+
+    for word in sentence.split():
+        if word not in unique_words:
+            unique_words.append(word)
+    
+    for word in sentence.split():
+        for u in range(len(unique_words)):
+            if unique_words[u] == word:
+                positions.append(u+1)
+    
+    try:
+        with open("positions.txt", "w") as f:
+            f.write(str(positions))
+    except:
+        print("Error with file")
+
+    return unique_words, positions
+
+
+print(task2(sentence))
