@@ -26,7 +26,7 @@ def task2(sentence):
     
     try:
         with open("positions.txt", "w") as f:
-            f.write(str(positions))
+            f.write(str(positions) + "\n" + str(unique_words))
     except:
         print("Error with file")
 
