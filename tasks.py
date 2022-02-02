@@ -78,7 +78,29 @@ def decompress(fileName):
             recreated += (unique_words[p-1].strip("'")) + ' '
         else:
             recreated += unique_words[p-1].strip("'")
-    
-    print(recreated)
+
+    count = 0
+    lst = []
+    finalstr = ""
+ 
+    for i in recreated:
+        lst.append(i)
+        
+    for i in lst:
+        count += 1
+        if i.isalpha():
+            if lst[count+1] == " ":
+                if lst[count+2] in "'.,;:?/'\"":
+                    lst[count+1] = ""
+    for i in lst:
+        finalstr = finalstr + i
+        
+    final = finalstr.strip()
+    try: 
+        f = open("recreated.txt", "w")
+        f.write(final)
+        f.close()
+    except:
+        print("Error in decompress")
 
 decompress("task3.txt")
